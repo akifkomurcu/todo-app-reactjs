@@ -22,17 +22,26 @@ function Footer({ todos, setTodos, activeFilter, setActiveFilter }) {
         <meta property="activeFilter" content="all" mv-storage="none"></meta>
         <ul className="filters">
           <li>
-            <a className={activeFilter === "all" ? "selected" : ""} onClick={() => handleFilter("all")}>
+            <a
+              className={activeFilter === "all" ? "selected" : ""}
+              onClick={() => handleFilter("all")}
+            >
               All
             </a>
           </li>
           <li>
-            <a className={activeFilter === "active" ? "selected" : ""} onClick={() => handleFilter("active")}>
+            <a
+              className={activeFilter === "active" ? "selected" : ""}
+              onClick={() => handleFilter("active")}
+            >
               Active
             </a>
           </li>
           <li>
-            <a className={activeFilter === "completed" ? "selected" : ""} onClick={() => handleFilter("completed")}>
+            <a
+              className={activeFilter === "completed" ? "selected" : ""}
+              onClick={() => handleFilter("completed")}
+            >
               Completed
             </a>
           </li>

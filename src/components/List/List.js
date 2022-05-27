@@ -37,11 +37,26 @@ function List({ todos, setTodos, activeFilter }) {
               <li
                 key={index}
                 className={element.done ? "completed" : ""}
-                style={{ display: (element.done && activeFilter === "active") || (!element.done && activeFilter === "completed") ? "none" : "block" }}>
+                style={{
+                  display:
+                    (element.done && activeFilter === "active") ||
+                      (!element.done && activeFilter === "completed")
+                      ? "none"
+                      : "block",
+                }}
+              >
                 <div className="view">
-                  <input className="toggle" type="checkbox" onChange={() => handleCheck(index)} checked={element.done} />
+                  <input
+                    className="toggle"
+                    type="checkbox"
+                    onChange={() => handleCheck(index)}
+                    checked={element.done}
+                  />
                   <label>{element.todo}</label>
-                  <button className="destroy" onClick={() => handleDestroy(index)}></button>
+                  <button
+                    className="destroy"
+                    onClick={() => handleDestroy(index)}
+                  ></button>
                 </div>
               </li>
             );
